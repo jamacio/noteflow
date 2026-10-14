@@ -18,11 +18,14 @@ Noteflow adds a **My Notes** tree, backed by any folder on disk, plus an optiona
 ## How sync works
 
 ```
- Machine A                 Settings Sync                Machine B
-┌──────────┐      syncedNotes (global state)      ┌──────────┐
-│ My Notes │ ───────────────────────────────────▶ │ My Notes │
-│ (disk)   │ ◀─────────────────────────────────── │ (disk)   │
-└──────────┘                                       └──────────┘
+  Machine A                      Machine B
+┌───────────┐                  ┌───────────┐
+│ My Notes  │                  │ My Notes  │
+│  (disk)   │                  │  (disk)   │
+└─────┬─────┘                  └─────┬─────┘
+      │                              │
+      └───▶ Settings Sync ◀──────────┘
+               (noteflow.syncedNotes)
 ```
 
 Noteflow doesn't talk to any server of its own. It stores the content of every note in a bit of
