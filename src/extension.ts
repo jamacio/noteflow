@@ -189,6 +189,34 @@ export function activate(context: vscode.ExtensionContext): void {
       }
     }),
   );
+  // autosave a note shortly after you stop typing, so edits sync without waiting for Ctrl+S
+  const autosaveTimers = new Map<string, ReturnType<typeof setTimeout>>();
+  context.subscriptions.push(
+    vscode.workspace.onDidChangeTextDocument((e) => {
+      const doc = e.document;
+      if (
+        doc.uri.scheme !== "file" ||
+        !doc.isDirty ||
+        locationOf(doc.uri.fsPath)?.root !== getMyNotesFolder()
+      ) {
+        return;
+      }
+      const key = doc.uri.toString();
+      const existing = autosaveTimers.get(key);
+      if (existing) {
+        clearTimeout(existing);
+      }
+      autosaveTimers.set(
+        key,
+        setTimeout(() => {
+          autosaveTimers.delete(key);
+          if (doc.isDirty) {
+            void doc.save();
+          }
+        }, 1000),
+      );
+    }),
+  );
   context.subscriptions.push(
     vscode.window.onDidChangeWindowState((state) => {
       if (state.focused) {

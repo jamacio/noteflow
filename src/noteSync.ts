@@ -207,7 +207,7 @@ export class NoteSync implements vscode.Disposable {
       if (vscode.window.state.focused) {
         this.schedule(0);
       }
-    }, 30 * 1000);
+    }, 8 * 1000);
   }
 
   static isEnabled(): boolean {
@@ -224,7 +224,7 @@ export class NoteSync implements vscode.Disposable {
   }
 
   // sync soon, several changes in a row sync once
-  schedule(delay = 1500): void {
+  schedule(delay = 600): void {
     if (this.timer) {
       clearTimeout(this.timer);
     }
