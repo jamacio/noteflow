@@ -9,12 +9,36 @@
     "type": "git",
     "url": "https://github.com/jamacio/noteflow.git"
   },
+  "bugs": {
+    "url": "https://github.com/jamacio/noteflow/issues"
+  },
+  "homepage": "https://github.com/jamacio/noteflow#readme",
   "engines": {
     "vscode": "^1.87.0"
   },
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "notes",
+    "note taking",
+    "markdown",
+    "sync",
+    "settings sync",
+    "sidebar",
+    "notebook",
+    "journal",
+    "todo",
+    "memo",
+    "wiki",
+    "knowledge base"
+  ],
+  "pricing": "Free",
+  "qna": "https://github.com/jamacio/noteflow/issues",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
   "icon": "resources/icon.png",
   "main": "./dist/extension.js",
   "contributes": {
