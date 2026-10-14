@@ -1,5 +1,7 @@
 # Noteflow - Synced Markdown Notes
 
+[**Get it from the Visual Studio Marketplace**](https://marketplace.visualstudio.com/items?itemName=JamacioRocha.noteflow)
+
 Keep a folder of Markdown notes in the side bar of VS Code, and have it follow you to every machine where you sign in to Settings Sync.
 
 ## What it is
