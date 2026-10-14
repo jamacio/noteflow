@@ -2,7 +2,7 @@
   "name": "noteflow",
   "displayName": "Noteflow - Synced Markdown Notes",
   "description": "Keep a folder of Markdown notes in the side bar, synced between every VS Code you sign in to with Settings Sync.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "publisher": "JamacioRocha",
   "license": "MIT",
   "repository": {
