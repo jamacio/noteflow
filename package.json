@@ -59,56 +59,215 @@
       }
     ],
     "commands": [
-      { "command": "noteflow.newNote", "title": "New Note", "category": "Noteflow", "icon": "$(new-file)" },
-      { "command": "noteflow.newFolder", "title": "New Folder", "category": "Noteflow", "icon": "$(new-folder)" },
-      { "command": "noteflow.quickOpen", "title": "Quick Open Notes", "category": "Noteflow" },
-      { "command": "noteflow.rename", "title": "Rename", "category": "Noteflow" },
-      { "command": "noteflow.delete", "title": "Delete", "category": "Noteflow" },
-      { "command": "noteflow.moveTo", "title": "Move To...", "category": "Noteflow" },
-      { "command": "noteflow.search", "title": "Search Notes", "category": "Noteflow", "icon": "$(search)" },
-      { "command": "noteflow.sortBy", "title": "Sort By...", "category": "Noteflow", "icon": "$(list-ordered)" },
-      { "command": "noteflow.refresh", "title": "Refresh", "category": "Noteflow", "icon": "$(refresh)" },
-      { "command": "noteflow.openPreview", "title": "Open Preview", "category": "Noteflow" },
-      { "command": "noteflow.revealInOS", "title": "Reveal in File Explorer", "category": "Noteflow" },
-      { "command": "noteflow.chooseFolder", "title": "Choose Notes Folder", "category": "Noteflow", "icon": "$(folder-opened)" },
-      { "command": "noteflow.createFolder", "title": "Create Folder", "category": "Noteflow" },
-      { "command": "noteflow.setupProjectNotes", "title": "Set Up Project Notes", "category": "Noteflow" },
-      { "command": "noteflow.syncNow", "title": "Sync Now", "category": "Noteflow", "icon": "$(sync)" },
-      { "command": "noteflow.clearRecent", "title": "Clear Recent Notes", "category": "Noteflow" }
+      {
+        "command": "noteflow.newNote",
+        "title": "New Note",
+        "category": "Noteflow",
+        "icon": "$(new-file)"
+      },
+      {
+        "command": "noteflow.newFolder",
+        "title": "New Folder",
+        "category": "Noteflow",
+        "icon": "$(new-folder)"
+      },
+      {
+        "command": "noteflow.quickOpen",
+        "title": "Quick Open Notes",
+        "category": "Noteflow"
+      },
+      {
+        "command": "noteflow.rename",
+        "title": "Rename",
+        "category": "Noteflow"
+      },
+      {
+        "command": "noteflow.delete",
+        "title": "Delete",
+        "category": "Noteflow"
+      },
+      {
+        "command": "noteflow.moveTo",
+        "title": "Move To...",
+        "category": "Noteflow"
+      },
+      {
+        "command": "noteflow.search",
+        "title": "Search Notes",
+        "category": "Noteflow",
+        "icon": "$(search)"
+      },
+      {
+        "command": "noteflow.sortBy",
+        "title": "Sort By...",
+        "category": "Noteflow",
+        "icon": "$(list-ordered)"
+      },
+      {
+        "command": "noteflow.refresh",
+        "title": "Refresh",
+        "category": "Noteflow",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "noteflow.openPreview",
+        "title": "Open Preview",
+        "category": "Noteflow"
+      },
+      {
+        "command": "noteflow.revealInOS",
+        "title": "Reveal in File Explorer",
+        "category": "Noteflow"
+      },
+      {
+        "command": "noteflow.chooseFolder",
+        "title": "Choose Notes Folder",
+        "category": "Noteflow",
+        "icon": "$(folder-opened)"
+      },
+      {
+        "command": "noteflow.createFolder",
+        "title": "Create Folder",
+        "category": "Noteflow"
+      },
+      {
+        "command": "noteflow.setupProjectNotes",
+        "title": "Set Up Project Notes",
+        "category": "Noteflow"
+      },
+      {
+        "command": "noteflow.syncNow",
+        "title": "Sync Now",
+        "category": "Noteflow",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "noteflow.clearRecent",
+        "title": "Clear Recent Notes",
+        "category": "Noteflow"
+      }
     ],
     "menus": {
       "commandPalette": [
-        { "command": "noteflow.rename", "when": "false" },
-        { "command": "noteflow.delete", "when": "false" },
-        { "command": "noteflow.moveTo", "when": "false" },
-        { "command": "noteflow.openPreview", "when": "false" },
-        { "command": "noteflow.revealInOS", "when": "false" },
-        { "command": "noteflow.createFolder", "when": "false" }
+        {
+          "command": "noteflow.rename",
+          "when": "false"
+        },
+        {
+          "command": "noteflow.delete",
+          "when": "false"
+        },
+        {
+          "command": "noteflow.moveTo",
+          "when": "false"
+        },
+        {
+          "command": "noteflow.openPreview",
+          "when": "false"
+        },
+        {
+          "command": "noteflow.revealInOS",
+          "when": "false"
+        },
+        {
+          "command": "noteflow.createFolder",
+          "when": "false"
+        }
       ],
       "view/title": [
-        { "command": "noteflow.newNote", "when": "view == noteflow.myNotes || view == noteflow.projectNotes", "group": "navigation@1" },
-        { "command": "noteflow.newFolder", "when": "view == noteflow.myNotes || view == noteflow.projectNotes", "group": "navigation@2" },
-        { "command": "noteflow.search", "when": "view == noteflow.myNotes || view == noteflow.projectNotes", "group": "navigation@3" },
-        { "command": "noteflow.sortBy", "when": "view == noteflow.myNotes || view == noteflow.projectNotes", "group": "navigation@4" },
-        { "command": "noteflow.refresh", "when": "view == noteflow.myNotes || view == noteflow.projectNotes", "group": "1_refresh" },
-        { "command": "noteflow.revealInOS", "when": "view == noteflow.myNotes || view == noteflow.projectNotes", "group": "1_refresh" },
-        { "command": "noteflow.chooseFolder", "when": "view == noteflow.myNotes", "group": "1_refresh" },
-        { "command": "noteflow.syncNow", "when": "view == noteflow.myNotes", "group": "1_refresh" }
+        {
+          "command": "noteflow.newNote",
+          "when": "view == noteflow.myNotes || view == noteflow.projectNotes",
+          "group": "navigation@1"
+        },
+        {
+          "command": "noteflow.newFolder",
+          "when": "view == noteflow.myNotes || view == noteflow.projectNotes",
+          "group": "navigation@2"
+        },
+        {
+          "command": "noteflow.search",
+          "when": "view == noteflow.myNotes || view == noteflow.projectNotes",
+          "group": "navigation@3"
+        },
+        {
+          "command": "noteflow.sortBy",
+          "when": "view == noteflow.myNotes || view == noteflow.projectNotes",
+          "group": "navigation@4"
+        },
+        {
+          "command": "noteflow.syncNow",
+          "when": "view == noteflow.myNotes",
+          "group": "navigation@5"
+        },
+        {
+          "command": "noteflow.refresh",
+          "when": "view == noteflow.myNotes || view == noteflow.projectNotes",
+          "group": "1_refresh"
+        },
+        {
+          "command": "noteflow.revealInOS",
+          "when": "view == noteflow.myNotes || view == noteflow.projectNotes",
+          "group": "1_refresh"
+        },
+        {
+          "command": "noteflow.chooseFolder",
+          "when": "view == noteflow.myNotes",
+          "group": "1_refresh"
+        }
       ],
       "view/item/context": [
-        { "command": "noteflow.openPreview", "when": "view =~ /^noteflow\\./ && viewItem == note-md", "group": "inline" },
-        { "command": "noteflow.newNote", "when": "view =~ /^noteflow\\./ && viewItem == folder", "group": "1_new@1" },
-        { "command": "noteflow.newFolder", "when": "view =~ /^noteflow\\./ && viewItem == folder", "group": "1_new@2" },
-        { "command": "noteflow.rename", "when": "view =~ /^noteflow\\./ && (viewItem == folder || viewItem =~ /^note/)", "group": "2_modify@1" },
-        { "command": "noteflow.delete", "when": "view =~ /^noteflow\\./ && (viewItem == folder || viewItem =~ /^note/)", "group": "2_modify@2" },
-        { "command": "noteflow.moveTo", "when": "view =~ /^noteflow\\./ && (viewItem == folder || viewItem =~ /^note/)", "group": "2_modify@3" },
-        { "command": "noteflow.search", "when": "view =~ /^noteflow\\./ && viewItem == folder", "group": "3_search" },
-        { "command": "noteflow.revealInOS", "when": "view =~ /^noteflow\\./ && (viewItem == folder || viewItem =~ /^note/)", "group": "4_reveal" }
+        {
+          "command": "noteflow.openPreview",
+          "when": "view =~ /^noteflow\\./ && viewItem == note-md",
+          "group": "inline"
+        },
+        {
+          "command": "noteflow.newNote",
+          "when": "view =~ /^noteflow\\./ && viewItem == folder",
+          "group": "1_new@1"
+        },
+        {
+          "command": "noteflow.newFolder",
+          "when": "view =~ /^noteflow\\./ && viewItem == folder",
+          "group": "1_new@2"
+        },
+        {
+          "command": "noteflow.rename",
+          "when": "view =~ /^noteflow\\./ && (viewItem == folder || viewItem =~ /^note/)",
+          "group": "2_modify@1"
+        },
+        {
+          "command": "noteflow.delete",
+          "when": "view =~ /^noteflow\\./ && (viewItem == folder || viewItem =~ /^note/)",
+          "group": "2_modify@2"
+        },
+        {
+          "command": "noteflow.moveTo",
+          "when": "view =~ /^noteflow\\./ && (viewItem == folder || viewItem =~ /^note/)",
+          "group": "2_modify@3"
+        },
+        {
+          "command": "noteflow.search",
+          "when": "view =~ /^noteflow\\./ && viewItem == folder",
+          "group": "3_search"
+        },
+        {
+          "command": "noteflow.revealInOS",
+          "when": "view =~ /^noteflow\\./ && (viewItem == folder || viewItem =~ /^note/)",
+          "group": "4_reveal"
+        }
       ]
     },
     "keybindings": [
-      { "command": "noteflow.newNote", "key": "alt+n" },
-      { "command": "noteflow.quickOpen", "key": "alt+l" }
+      {
+        "command": "noteflow.newNote",
+        "key": "alt+n"
+      },
+      {
+        "command": "noteflow.quickOpen",
+        "key": "alt+l"
+      }
     ],
     "configuration": {
       "title": "Noteflow",
